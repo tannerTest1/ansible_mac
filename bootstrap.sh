@@ -6,7 +6,7 @@
 # Disable Screen Saver.
 # Run sudo visudo in Terminal, find %admin ALL=(ALL) ALL add admin ALL=(ALL) NOPASSWD: ALL to allow sudo without a password.
 
-# add user to passwordless sudo (required for non-interactive 
+# add user to passwordless sudo (required for non-interactive
 # Xcode command line tools and homebrew installation)
 
 # install xcode and tools
@@ -25,8 +25,8 @@
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 # add Homebrew to PATH and reload .zshrc
-echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zshrc 
-source ~/.zshrc 
+echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >>~/.zshrc
+source ~/.zshrc
 
 # Update brew and install python3
 # brew update && brew upgrade
