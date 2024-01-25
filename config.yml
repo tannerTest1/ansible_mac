@@ -19,7 +19,7 @@ dockitems_remove:
   - Calendar
   - Contacts
   - Reminders
-  - FreeForm
+  - Freeform
   - TV
   - Music
   - News
@@ -32,7 +32,8 @@ dockitems_persist:
     path: "/Applications/Slack"
     pos: 3
   - name: "Chrome"
-    path: "/Applications/Chrome"
+    path: "/Applications/Google Chrome"
+    pos: 4
 
 configure_sudoers: false
 sudoers_custom_config: ''
