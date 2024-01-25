@@ -49,7 +49,7 @@ pip3 install ansible
 # cd ~/projects
 
 # clone ansible mac setup repository
-# git clone git@github.com/geerlingguy/mac-dev-playbook.git
+# git clone https://github.com/geerlingguy/mac-dev-playbook.git
 
 # install mac-setup ansible dependencies
 # ansible-galaxy install -r requirements.yml
