@@ -25,7 +25,7 @@
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 # add Homebrew to PATH and reload .zshrc
-echo \"eval "$(/opt/homebrew/bin/brew shellenv)"\" >>~/.zshrc
+echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >>~/.zshrc
 source ~/.zshrc
 
 # Update brew and install python3
