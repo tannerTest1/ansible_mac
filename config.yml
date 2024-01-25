@@ -30,10 +30,25 @@ dockitems_persist:
 #   pos: 5
   - name: "Slack"
     path: "/Applications/Slack.app"
-    pos: 3
+    pos: 2
   - name: "Chrome"
     path: "/Applications/Google Chrome.app"
+    pos: 3
+  - name: "iterm2"
+    path: "/Applications/iTerm.app"
     pos: 4
+  - name: "VS Code"
+    path: "/Applications/Visual Studio Code.app"
+    pos: 5
+  - name: "Sublime Text"
+    path: "/Applications/Sublime Text.app/"
+    pos: 6
+  - name: "Docker Desktop"
+    path: "/Applications/Docker.app"
+    pos: 7
+  - name: "GitKraken"
+    path: "/Applications/GitKraken.app"
+    pos: 8
 
 configure_sudoers: false
 sudoers_custom_config: ''
@@ -66,7 +81,7 @@ homebrew_installed_packages:
   # - httpie
   - iperf
   # - libevent
-  - sqlite
+  # - sqlite
   # - mcrypt
   - nmap
   # - node
@@ -98,9 +113,19 @@ homebrew_cask_apps:
   # - transmit
   - visual-studio-code
   - gitkraken
+  - iterm2
+  - google-drive
+  - notion
+  - front
+  - microsoft-remote-desktop
+  - microsoft-office
+  - lastpass
+  - lastpass-cli
+
 
 # See `geerlingguy.mas` role documentation for usage instructions.
 mas_installed_apps: []
+  # - { id: 1298450641, name: "monday.com (1.0.27)" }
 mas_email: ""
 mas_password: ""
 
@@ -127,7 +152,7 @@ pip_packages: []
 #   version: "0.16.3" # default: N/A
 
 # Set to 'true' to configure Sublime Text.
-configure_sublime: false
+configure_sublime: true
 sublime_base_path: '~/Library/Application Support/Sublime Text'
 sublime_config_path: "Packages/User"
 sublime_package_control:
