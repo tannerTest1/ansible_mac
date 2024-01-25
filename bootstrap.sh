@@ -25,7 +25,7 @@
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 # add Homebrew to PATH and reload .zshrc
-echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >>~/.zshrc
+echo \"eval "$(/opt/homebrew/bin/brew shellenv)"\" >>~/.zshrc
 source ~/.zshrc
 
 # Update brew and install python3
@@ -49,7 +49,7 @@ pip3 install ansible
 # cd ~/projects
 
 # clone ansible mac setup repository
-git clone git@github.com/geerlingguy/mac-dev-playbook.git
+# git clone git@github.com/geerlingguy/mac-dev-playbook.git
 
 # install mac-setup ansible dependencies
 # ansible-galaxy install -r requirements.yml
