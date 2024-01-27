@@ -1,61 +1,28 @@
 ---
 downloads: ~/.ansible-downloads/
 
-configure_dotfiles: false
-configure_terminal: false
-configure_osx: false
+configure_dotfiles: true
+configure_terminal: true
+configure_osx: true
 
 # Set to 'true' to configure the Dock via dockutil.
-configure_dock: true
-dockitems_remove:
+configure_dock: false
+dockitems_remove: []
 # - Launchpad
 # - TV
 # - Podcasts
 # - 'App Store'
-  - Safari
-  - Mail
-  - Maps
-  - Photos
-  - Calendar
-  - Contacts
-  - Reminders
-  - Freeform
-  - TV
-  - Music
-  - News
-
-dockitems_persist:
+dockitems_persist: []
 # - name: "Sublime Text"
 #   path: "/Applications/Sublime Text.app/"
 #   pos: 5
-  - name: "Slack"
-    path: "/Applications/Slack.app"
-    pos: 2
-  - name: "Chrome"
-    path: "/Applications/Google Chrome.app"
-    pos: 3
-  - name: "iterm2"
-    path: "/Applications/iTerm.app"
-    pos: 4
-  - name: "VS Code"
-    path: "/Applications/Visual Studio Code.app"
-    pos: 5
-  - name: "Sublime Text"
-    path: "/Applications/Sublime Text.app/"
-    pos: 6
-  - name: "Docker Desktop"
-    path: "/Applications/Docker.app"
-    pos: 7
-  - name: "GitKraken"
-    path: "/Applications/GitKraken.app"
-    pos: 8
 
-configure_sudoers: true
-# sudoers_custom_config: ''
+configure_sudoers: false
+sudoers_custom_config: ''
 # Example:
-sudoers_custom_config: '%admin ALL=(ALL) NOPASSWD: ALL'
-# Allow users in admin group to use sudo with no password.
-  # %admin ALL=(ALL) NOPASSWD: ALL
+# sudoers_custom_config: |
+#   # Allow users in admin group to use sudo with no password.
+#   %admin ALL=(ALL) NOPASSWD: ALL
 
 dotfiles_repo: https://github.com/geerlingguy/dotfiles.git
 dotfiles_repo_accept_hostkey: true
@@ -69,67 +36,51 @@ dotfiles_files:
 
 homebrew_installed_packages:
   # - ansible # Installed via Pip.
-  # - autoconf
-  # - bash-completion
-  # - gettext
-  # - gifsicle
-  # - gh
-  # - go
-  # - gpg
-  # - httpie
-  # - libevent
-  # - sqlite
-  # - mcrypt
-  # - node
-  # - nvm
-  # - php
-  # - openssl
-  # - pv
-  # - wget
-  # - wrk
-  - coreutils
-  - cowsay
+  - autoconf
+  - bash-completion
   - doxygen
+  - gettext
+  - gifsicle
   - git
+  - gh
+  - go
+  - gpg
+  - httpie
   - iperf
-  - mas
+  - libevent
+  - sqlite
+  - mcrypt
   - nmap
-  - readline
+  - node
+  - nvm
+  - php
   - ssh-copy-id
-  - vim
-  - zsh
+  - cowsay
+  - readline
+  - openssl
+  - pv
+  - wget
+  - wrk
   - zsh-history-substring-search
 
 homebrew_taps: []
 
 homebrew_cask_appdir: /Applications
 homebrew_cask_apps:
-  # - chromedriver
-  # - dropbox
-  # - handbrake
-  # - licecap
-  # - sequel-ace
-  # - sublime-text
-  # - transmit
+  - chromedriver
   - docker
+  - dropbox
   - firefox
-  - front
-  - gitkraken
   - google-chrome
-  - google-drive
-  - iterm2
-  - lastpass
-  - microsoft-office
-  - microsoft-remote-desktop
-  - notion
+  - handbrake
+  - licecap
+  - sequel-ace
   - slack
-  - visual-studio-code
-  - hpedrorodrigues/tools/dockutil
-
+  - sublime-text
+  - transmit
 
 # See `geerlingguy.mas` role documentation for usage instructions.
 mas_installed_apps: []
-  # - { id: 1298450641, name: "monday.com (1.0.27)" }
 mas_email: ""
 mas_password: ""
 
