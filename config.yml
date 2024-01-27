@@ -49,6 +49,9 @@ dockitems_persist:
   - name: "GitKraken"
     path: "/Applications/GitKraken.app"
     pos: 8
+  - name: "Notion"
+    path: "/Applications/Notion.app"
+    pos: 9
 
 configure_sudoers: true
 # sudoers_custom_config: ''
