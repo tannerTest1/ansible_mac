@@ -134,7 +134,7 @@ homebrew_cask_apps:
   # - sequel-ace
   - slack
   - sublime-text
-  - transmit
+  # - transmit
   - front
   - gitkraken
   - google-drive
