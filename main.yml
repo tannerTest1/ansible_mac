@@ -46,7 +46,11 @@
       when: configure_sublime
       tags: ['sublime-text']
       
-    - import_tasks: tasks/more.yml
+    - import_tasks: tasks/vs-code.yml
+      when: configure_vs-code
+    
+    - import_tasks: tasks/zsh.yml
+      when: configure_zsh
 
     - name: Run post-provision task files in a block.
       tags: ['post']
