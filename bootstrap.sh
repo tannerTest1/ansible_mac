@@ -48,6 +48,9 @@ pip3 install ansible
 # ensure pip3 ansible in path
 export PATH="$HOME/Library/Python/3.9/bin:$PATH"
 
+# Generate rsa ssh key
+# ssh-keygen -q -t rsa -f "$HOME/.ssh/id_rsa"
+
 # create Projects directory in Home
 # mkdir -p ~/projects
 # cd ~/projects
