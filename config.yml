@@ -109,19 +109,29 @@ homebrew_installed_packages:
   - mas
   - vim
   - zsh
+  - wireshark
 
 homebrew_taps: []
 
 homebrew_cask_appdir: /Applications
-homebrew_cask_apps:
-  - chromedriver
-  - docker
-  - dropbox
-  - firefox
-  - google-chrome
+homebrew_cask_uninstalled_apps:
   - handbrake
+  - transmit
   - licecap
   - sequel-ace
+  - dropbox
+  - chromedriver
+
+homebrew_cask_appdir: /Applications
+homebrew_cask_apps:
+  # - chromedriver
+  - docker
+  # - dropbox
+  - firefox
+  - google-chrome
+  # - handbrake
+  # - licecap
+  # - sequel-ace
   - slack
   - sublime-text
   - transmit
