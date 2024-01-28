@@ -1,12 +1,14 @@
 ---
 downloads: ~/.ansible-downloads/
 
-configure_dotfiles: true
-configure_terminal: true
-configure_osx: true
+configure_dotfiles: false
+configure_terminal: false
+configure_osx: false
+configure_vscode: false
+configure_zsh: false
 
 # Set to 'true' to configure the Dock via dockutil.
-configure_dock: true
+configure_dock: false
 dockitems_remove:
 # - Launchpad
 # - TV
@@ -23,6 +25,7 @@ dockitems_remove:
   - TV
   - Music
   - News
+
 dockitems_persist:
 # - name: "Sublime Text"
 #   path: "/Applications/Sublime Text.app/"
@@ -62,11 +65,11 @@ dockitems_persist:
     pos: 12
 
 configure_sudoers: true
-sudoers_custom_config: '%admin ALL=(ALL) NOPASSWD: ALL'
+# sudoers_custom_config: ''
 # Example:
-# sudoers_custom_config: |
-#   # Allow users in admin group to use sudo with no password.
-#   %admin ALL=(ALL) NOPASSWD: ALL
+sudoers_custom_config: '%admin ALL=(ALL) NOPASSWD: ALL'
+# Allow users in admin group to use sudo with no password.
+  # %admin ALL=(ALL) NOPASSWD: ALL
 
 dotfiles_repo: https://github.com/geerlingguy/dotfiles.git
 dotfiles_repo_accept_hostkey: true
@@ -80,66 +83,68 @@ dotfiles_files:
 
 homebrew_installed_packages:
   # - ansible # Installed via Pip.
-  - autoconf
-  - bash-completion
-  - doxygen
-  - gettext
-  - gifsicle
-  - git
-  - gh
-  - go
-  - gpg
-  - httpie
-  - iperf
-  - libevent
-  - sqlite
-  - mcrypt
-  - nmap
-  - node
-  - nvm
-  - php
-  - ssh-copy-id
-  - cowsay
-  - readline
-  - openssl
-  - pv
-  - wget
-  - wrk
-  - zsh-history-substring-search
+  # - autoconf
+  # - bash-completion
+  # - gettext
+  # - gifsicle
+  # - gh
+  # - go
+  # - gpg
+  # - httpie
+  # - libevent
+  # - sqlite
+  # - mcrypt
+  # - node
+  # - nvm
+  # - php
+  # - openssl
+  # - pv
+  # - wget
+  # - wrk
   - coreutils
+  - cowsay
+  - doxygen
+  - git
+  - iperf
   - mas
+  - nmap
+  - readline
+  - ssh-copy-id
   - vim
   - zsh
+  - zsh-history-substring-search
 
 homebrew_taps: []
 
 homebrew_cask_appdir: /Applications
 homebrew_cask_apps:
-  - chromedriver
+  # - chromedriver
+  # - dropbox
+  # - handbrake
+  # - licecap
+  # - sequel-ace
+  # - sublime-text
+  # - transmit
   - docker
-  - dropbox
   - firefox
-  - google-chrome
-  - handbrake
-  - licecap
-  - sequel-ace
-  - slack
-  - sublime-text
-  - transmit
   - front
   - gitkraken
+  - google-chrome
   - google-drive
   - iterm2
   - lastpass
   - microsoft-office
   - microsoft-remote-desktop
   - notion
+  - slack
   - visual-studio-code
   # - hpedrorodrigues/tools/dockutil
   - logi-options-plus
 
+
 # See `geerlingguy.mas` role documentation for usage instructions.
 mas_installed_apps: []
+  # - { id: 1298450641, name: "monday.com (1.0.27)" }
 mas_email: ""
 mas_password: ""
 
@@ -166,7 +171,7 @@ pip_packages: []
 #   version: "0.16.3" # default: N/A
 
 # Set to 'true' to configure Sublime Text.
-configure_sublime: true
+configure_sublime: false
 sublime_base_path: '~/Library/Application Support/Sublime Text'
 sublime_config_path: "Packages/User"
 sublime_package_control:

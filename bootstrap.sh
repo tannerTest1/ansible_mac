@@ -53,7 +53,6 @@ export PATH="$HOME/Library/Python/3.9/bin:$PATH"
 
 # create Projects directory in Home
 # mkdir -p ~/projects
-# cd ~/projects
 
 # clone ansible mac setup repository
 # git clone https://github.com/geerlingguy/mac-dev-playbook.git
