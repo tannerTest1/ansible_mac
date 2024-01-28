@@ -45,6 +45,9 @@ pip3 install --upgrade pip
 # install ansible
 pip3 install ansible
 
+# ensure pip3 ansible in path
+export PATH="$HOME/Library/Python/3.9/bin:$PATH"
+
 # create Projects directory in Home
 # mkdir -p ~/projects
 # cd ~/projects
