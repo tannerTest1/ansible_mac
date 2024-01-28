@@ -23,6 +23,12 @@ dockitems_remove:
   - TV
   - Music
   - News
+  - Messages
+  - FaceTime
+  - Notes
+  - 'App Store'
+  - 'System Settings'
+
 dockitems_persist:
 # - name: "Sublime Text"
 #   path: "/Applications/Sublime Text.app/"
