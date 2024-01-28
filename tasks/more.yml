@@ -1,0 +1,82 @@
+---
+- name: Get the path to ZSH
+  become: false
+  local_action: command which zsh
+  register: zsh_path
+
+- name: "Ensure homebrew zsh is in allowed shells"
+  lineinfile:
+    path: /etc/shells
+    line: "{{ zsh_path.stdout }}"
+  become: true
+
+# - name: Install Oh My ZSH
+#   shell: sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+#   args:
+#     creates: "/Users/{{ lookup('env', 'USER') }}/.oh-my-zsh"
+
+- name: Set ZSH as the default shell
+  shell: chsh -s $(which zsh) {{ lookup('env', 'USER') }}
+  become: true
+
+- name: "Create a default ZSH configuration"
+  template:
+    src: templates/.zshrc.j2
+    dest: /Users/{{ lookup('env', 'USER') }}/.zshrc
+    owner: "{{ lookup('env', 'USER') }}"
+    force: yes
+
+- name: "Download dracula colors for iTerm"
+  git:
+    repo: https://github.com/dracula/iterm.git
+    dest: /Users/{{ lookup('env', 'USER') }}/iterm
+    clone: yes
+
+- name: Create a default VSCode configuration
+  template:
+    src: templates/vscode-settings.json.j2
+    dest: /Users/{{ lookup('env', 'USER') }}/Library/Application Support/Code/User/settings.json
+    owner: "{{ lookup('env', 'USER') }}"
+    force: yes
+    
+- name: "Install Network Automation internal gitlab repository"
+  git:
+    repo: git@gitlab.internal.equipmentshare.com:it/network-automation.git
+    dest: /Users/{{ lookup('env', 'USER') }}/network-automation
+    clone: yes
+    accept_hostkey: true
+    key_file: ~/.ssh/id_rsa
+    
+# Add something which ensures path is set here
+- name: Install VSCode extensions
+  shell: code --install-extension {{ item }}
+  with_items:
+    # - apollographql.vscode-apollo
+    # - bradlc.vscode-tailwindcss
+    # - castwide.solargraph
+    # - clinyong.vscode-css-modules
+    # - eamodio.gitlens
+    # - jakebecker.elixir-ls
+    # - kaiwood.endwise
+    # - karunamurti.haml
+    # - ms-vscode-remote.vscode-remote-extensionpack
+    # - ms-vscode.vscode-typescript-tslint-plugin
+    # - msjsdiag.debugger-for-chrome
+    # - rebornix.ruby
+    # - richie5um2.vscode-sort-json
+    # - Tyriar.sort-lines
+    # - vscodevim.vim
+    # - wholroyd.jinja
+    # - wingrunr21.vscode-ruby
+    # - xabikos.javascriptsnippets
+    # - streetsidesoftware.code-spell-checker
+    # - fabiospampinato.vscode-todo-plus
+  - mechatroner.rainbow-csv
+  - ms-python.python
+  - ms-python.vscode-pylance
+  - oderwat.indent-rainbow
+  - redhat.vscode-xml
+  - foxundermoon.shell-format
+  - ms-azuretools.vscode-docker
+  - ms-vscode-remote.vscode-remote-extensionpack
+  - wholroyd.jinja
