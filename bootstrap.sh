@@ -2,6 +2,7 @@
 
 # Enable Auto-Login. Users & Groups -> Login Options -> Automatic login -> admin.
 # Allow SSH. Sharing -> Remote Login
+# sudo systemsetup -setremotelogin on
 # Disable Lock Screen. Preferences -> Lock Screen -> disable "Require Password" after 5.
 # Disable Screen Saver.
 # Run sudo visudo in Terminal, find %admin ALL=(ALL) ALL add admin ALL=(ALL) NOPASSWD: ALL to allow sudo without a password.
@@ -50,9 +51,10 @@ pip3 install ansible
 
 # clone ansible mac setup repository
 # git clone https://github.com/geerlingguy/mac-dev-playbook.git
+# git clone https://github.com/tannerTest1/ansible_mac.git
 
 # install mac-setup ansible dependencies
-# ansible-galaxy install -r requirements.yml
+# ansible-galaxy install -r ~/ansible_mac/requirements.yml
 
 # run playbook
 # ansible-playbook main.yml -i inventory --ask-become-pass

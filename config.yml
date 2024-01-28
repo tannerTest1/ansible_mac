@@ -52,7 +52,16 @@ dockitems_persist:
   - name: "Notion"
     path: "/Applications/Notion.app"
     pos: 9
-      
+  - name: "Front"
+    path: "/Applications/Front.app"
+    pos: 10
+  - name: "Microsoft Remote Desktop"
+    path: "/Applications/Microsoft Remote Desktop.app"
+    pos: 11
+  - name: "LastPass"
+    path: "/Applications/LastPass.app"
+    pos: 12
+
 configure_sudoers: true
 # sudoers_custom_config: ''
 # Example:
@@ -127,7 +136,8 @@ homebrew_cask_apps:
   - notion
   - slack
   - visual-studio-code
-  - hpedrorodrigues/tools/dockutil
+  # - hpedrorodrigues/tools/dockutil
+  - logi-options-plus
 
 
 # See `geerlingguy.mas` role documentation for usage instructions.
