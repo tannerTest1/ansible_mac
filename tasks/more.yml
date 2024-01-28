@@ -32,20 +32,23 @@
     dest: /Users/{{ lookup('env', 'USER') }}/iterm
     clone: yes
 
-- name: Create a default VSCode configuration
-  template:
-    src: templates/vscode-settings.json.j2
-    dest: /Users/{{ lookup('env', 'USER') }}/Library/Application Support/Code/User/settings.json
-    owner: "{{ lookup('env', 'USER') }}"
-    force: yes
-    
-- name: "Install Network Automation internal gitlab repository"
-  git:
-    repo: git@gitlab.internal.equipmentshare.com:it/network-automation.git
-    dest: /Users/{{ lookup('env', 'USER') }}/network-automation
-    clone: yes
-    accept_hostkey: true
-    key_file: ~/.ssh/id_rsa
+# Removed until a check is put in to create diractory if it's not found. I think vs code must be opened 1 time then include in playbook
+# - name: Create a default VSCode configuration
+#   template:
+#     src: templates/vscode-settings.json.j2
+#     dest: /Users/{{ lookup('env', 'USER') }}/Library/Application Support/Code/User/settings.json
+#     owner: "{{ lookup('env', 'USER') }}"
+#     force: yes
+
+# Add check on if key exists. Add public key to gitlab
+# Commented until tested on new mac 
+# - name: "Install Network Automation internal gitlab repository"
+#   git:
+#     repo: git@gitlab.internal.equipmentshare.com:it/network-automation.git
+#     dest: /Users/{{ lookup('env', 'USER') }}/network-automation
+#     clone: yes
+#     accept_hostkey: true
+#     key_file: ~/.ssh/id_rsa
     
 # Add something which ensures path is set here
 - name: Install VSCode extensions
