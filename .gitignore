@@ -1,3 +1,15 @@
 .DS_Store
 *.retry
 roles*
+files*
+tasks*
+templates*
+tests*
+ansible.cfg
+Brewfile
+config.custom.yml
+default.config.yml
+inv_local
+inventory
+main.yml
+requirements.yml
