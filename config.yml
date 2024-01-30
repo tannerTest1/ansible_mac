@@ -153,6 +153,7 @@ homebrew_cask_apps:
   # - hpedrorodrigues/tools/dockutil
   - logi-options-plus
   # - coteditor
+  - keeper-password-manager
 
 # See `geerlingguy.mas` role documentation for usage instructions.
 mas_installed_apps: []
